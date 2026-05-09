@@ -9,7 +9,7 @@ const photoData = [
     src: "assets/photo1.jpg"
   },
   { 
-    title: "My Angel Mom 👸", 
+    title: "My Everything 👸", 
     src: "assets/photo2.jpg"
   },
   { 
