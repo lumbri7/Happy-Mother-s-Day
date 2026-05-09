@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const photoData = [
-  { src: "/assets/photo1.jpg", caption: "A beautiful memory with Mom 💕" },
-  { src: "/assets/photo2.jpg", caption: "Moments that last forever 🌸" },
-  { src: "/assets/photo3.jpg", caption: "Together is my favorite place to be 💖" },
-  { src: "/assets/photo4.jpg", caption: "Adventures with my favorite person 🌟" },
-  { src: "/assets/photo5.jpg", caption: "Your smile lights up my world ☀️" },
+  { src: "assets/photo1.jpg", caption: "A beautiful memory with Mom 💕" },
+  { src: "assets/photo2.jpg", caption: "Moments that last forever 🌸" },
+  { src: "assets/photo3.jpg", caption: "Together is my favorite place to be 💖" },
+  { src: "assets/photo4.jpg", caption: "Adventures with my favorite person 🌟" },
+  { src: "assets/photo5.jpg", caption: "Your smile lights up my world ☀️" },
 ];
 
 export default function GalleryPage() {
@@ -213,7 +213,7 @@ export default function GalleryPage() {
             </p>
 
             <div style={{ marginTop: "60px" }}>
-              <Link href="/" style={{ 
+              <Link href="./" style={{ 
                 padding: "15px 30px", 
                 background: "var(--color-rose-500)", 
                 color: "white", 

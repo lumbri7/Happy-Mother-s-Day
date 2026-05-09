@@ -239,7 +239,7 @@ export default function TimelinePage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <Link href="/reasons" className="next-link">
+          <Link href="reasons" className="next-link">
             Reasons I Love You ❤️ →
           </Link>
         </motion.div>

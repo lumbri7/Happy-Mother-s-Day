@@ -219,7 +219,7 @@ export default function QuotesPage() {
           transition={{ duration: 0.8 }}
         >
           <p className="bottom-text">Every quote reminds me of how extraordinary you are 💛</p>
-          <Link href="/poem" className="next-link">
+          <Link href="poem" className="next-link">
             A Poem for You 🌸 →
           </Link>
         </motion.div>

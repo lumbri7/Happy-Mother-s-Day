@@ -225,7 +225,7 @@ export default function LetterPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5 }}
         >
-          <Link href="/timeline" className="next-link">
+          <Link href="timeline" className="next-link">
             Walk Through Our Timeline →
           </Link>
         </motion.div>

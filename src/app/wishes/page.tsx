@@ -229,7 +229,7 @@ export default function WishesPage() {
               💝
             </motion.span>
             <p className="final-text">Now let&apos;s look at our precious memories together...</p>
-            <Link href="/gallery-1" className="next-link">
+            <Link href="gallery-1" className="next-link">
               View Our Photos 📸 →
             </Link>
           </div>

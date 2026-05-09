@@ -228,7 +228,7 @@ export default function ReasonsPage() {
           <p className="bottom-text">
             &ldquo;The list never ends, Mom. Every day I find a new reason to be grateful for you.&rdquo; 💕
           </p>
-          <Link href="/quotes" className="next-link">
+          <Link href="quotes" className="next-link">
             Beautiful Quotes ✨ →
           </Link>
         </motion.div>

@@ -228,7 +228,7 @@ export default function PoemPage() {
             💝
           </motion.span>
           <p className="dedication">Written with all my love, for the best Mom ever</p>
-          <Link href="/wishes" className="next-link">
+          <Link href="wishes" className="next-link">
             Mother&apos;s Day Wishes 🎁 →
           </Link>
         </motion.div>
