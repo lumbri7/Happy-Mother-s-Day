@@ -105,7 +105,7 @@ export default function GalleryPage() {
       `}</style>
 
       <div className="gallery-nav">
-        <h1 className="nav-title">Khushi ❤️ Mumma</h1>
+        <h1 className="nav-title">Cute ❤️ Mumma</h1>
         <p className="nav-subtitle">MY BEAUTIFUL MEMORIES</p>
       </div>
 
@@ -135,17 +135,8 @@ export default function GalleryPage() {
         <p style={{ fontFamily: 'var(--font-script)', fontSize: '2rem', color: '#f43f5e', marginBottom: '30px' }}>
           You are the best Mom ever! ♾️❤️
         </p>
-        <Link href="./" style={{ 
-          display: 'inline-block',
-          padding: '12px 30px', 
-          background: '#fb7185', 
-          color: 'white', 
-          borderRadius: '50px', 
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          boxShadow: '0 10px 25px rgba(244, 63, 94, 0.3)'
-        }}>
-          ← Back to Home
+        <Link href="./" className="premium-button">
+          ← Back to Home 💐
         </Link>
       </footer>
     </div>

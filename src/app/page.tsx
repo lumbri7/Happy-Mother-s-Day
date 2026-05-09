@@ -266,10 +266,10 @@ export default function HomePage() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.3, duration: 0.6 }}
         >
-          <Link href="letter" className="cta-button">
+          <Link href="letter" className="hero-button">
             <span>Begin the Journey</span>
             <motion.span
-              animate={{ x: [0, 5, 0] }}
+              animate={{ x: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
             >
               →
