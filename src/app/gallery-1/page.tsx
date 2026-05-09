@@ -4,250 +4,150 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const photoData = [
-  { src: "assets/photo1.jpg", caption: "A beautiful memory with Mom 💕" },
-  { src: "assets/photo2.jpg", caption: "Moments that last forever 🌸" },
-  { src: "assets/photo3.jpg", caption: "Together is my favorite place to be 💖" },
-  { src: "assets/photo4.jpg", caption: "Adventures with my favorite person 🌟" },
-  { src: "assets/photo5.jpg", caption: "Your smile lights up my world ☀️" },
+  { 
+    title: "My Beautiful Mummyyy 💖", 
+    src: "assets/photo1.jpg", 
+    caption: "Aapne hamesha bina kuch expect kiye sirf pyaar diya hai aur shayad wahi duniya ka sabse pure feeling hota hai. Aapki awaaz sunke hi din better lagne lagta hai, aur ghar sirf aapki wajah se ghar jaisa lagta hai." 
+  },
+  { 
+    title: "My Angel Mom 👸", 
+    src: "assets/photo2.jpg", 
+    caption: "Moments shared with you are the most precious treasures of my life. Your smile is my daily inspiration and your strength is what keeps me going every single day." 
+  },
+  { 
+    title: "The Best Mummyyy 🧸", 
+    src: "assets/photo3.jpg", 
+    caption: "Together is my favorite place to be. Thank you for being my safe haven and for always understanding me even when I don't say a word. You are truly one of a kind." 
+  },
+  { 
+    title: "My Sweetest Mom 💐", 
+    src: "assets/photo4.jpg", 
+    caption: "Adventures with my favorite person are always the best. Every day with you is a celebration of love, kindness, and infinite patience. I am so lucky to have you." 
+  },
+  { 
+    title: "My World, My Mom 👩‍👧", 
+    src: "assets/photo5.jpg", 
+    caption: "Your smile lights up my world like nothing else. Thank you for being the heart of our home and for all the sacrifices you've made to see us happy. I love you endlessly." 
+  },
 ];
 
 export default function GalleryPage() {
   return (
-    <div className="page-container gradient-bg-rose">
-      <style jsx>{`
-        .gallery-container {
-          min-height: 100vh;
-          padding: 80px 20px 100px;
-          max-width: 1100px;
-          margin: 0 auto;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+    <div className="page-container" style={{ 
+      background: 'linear-gradient(to bottom, #fff5f7, #ffe4e6, #fce7f3)',
+      minHeight: '100vh',
+      padding: '60px 20px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    }}>
+      <style jsx global>{`
+        .photo-card {
+          background: white !important;
+          border-radius: 40px !important;
+          box-shadow: 0 20px 60px rgba(244, 63, 94, 0.1) !important;
+          padding: 30px !important;
+          width: 100% !important;
+          max-width: 420px !important;
+          margin-bottom: 50px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          border: 1px solid rgba(244, 63, 94, 0.05) !important;
         }
-
-        .gallery-header {
-          text-align: center;
-          margin-bottom: 60px;
+        .card-photo {
+          width: 100% !important;
+          height: auto !important;
+          border-radius: 25px !important;
+          margin: 20px 0 !important;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
         }
-
-        .photo-list {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 60px;
-          align-items: center;
+        .card-title {
+          font-family: var(--font-body) !important;
+          font-weight: 700 !important;
+          font-size: 1.4rem !important;
+          color: #be123c !important;
+          margin-bottom: 5px !important;
+          text-align: center !important;
         }
-
-        /* The Rounded Border for Every Photo */
-        .photo-frame {
-          width: 90%;
-          max-width: 650px;
-          padding: 12px;
-          background: white;
-          border-radius: 60px; /* Extremely rounded */
-          box-shadow: 0 20px 50px rgba(244, 63, 94, 0.2);
-          border: 2px solid #ffe4e6;
-          transition: transform 0.4s ease;
+        .card-emojis {
+          font-size: 1.5rem !important;
+          margin-bottom: 10px !important;
+          letter-spacing: 5px !important;
         }
-
-        .photo-frame img {
-          width: 100%;
-          height: auto;
-          display: block;
-          border-radius: 50px; /* Rounded image too */
+        .card-caption {
+          font-family: var(--font-body) !important;
+          font-size: 0.95rem !important;
+          line-height: 1.8 !important;
+          color: #555 !important;
+          text-align: center !important;
+          padding: 0 10px !important;
         }
-
-        .photo-frame:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 30px 60px rgba(244, 63, 94, 0.3);
+        .gallery-nav {
+           width: 100%;
+           max-width: 420px;
+           text-align: center;
+           margin-bottom: 40px;
+           border-bottom: 1px solid #fecdd3;
+           padding-bottom: 20px;
         }
-
-        .photo-caption {
-          margin-top: 20px;
-          text-align: center;
-          font-family: var(--font-script);
-          font-size: 1.5rem;
-          color: var(--color-rose-600);
-          padding: 0 20px 10px;
+        .nav-title {
+          font-size: 1.8rem;
+          font-weight: 900;
+          color: #be123c;
+          margin-bottom: 8px;
         }
-
-        /* Pairs Layout */
-        .pairs-section {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 60px;
-        }
-        .pair-row {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 30px;
-          width: 100%;
-        }
-
-        /* Final Message Section - Directly Visible, No Paging */
-        .final-reveal {
-          width: 100%;
-          margin-top: 100px;
-          padding: 80px 20px;
-          text-align: center;
-          background: linear-gradient(to bottom, transparent, #ffe4e6, #fce7f3);
-          border-radius: 80px;
-        }
-        .message-card {
-          max-width: 850px;
-          margin: 0 auto;
-          padding: 60px 40px;
-          background: rgba(255, 255, 255, 0.9);
-          backdrop-filter: blur(20px);
-          border-radius: 60px;
-          box-shadow: 0 40px 100px rgba(244, 63, 94, 0.2);
-          border: 2px solid white;
-        }
-
-        .fireworks-container {
-          position: fixed;
-          inset: 0;
-          pointer-events: none;
-          z-index: 100;
-        }
-
-        @media (max-width: 768px) {
-          .gallery-container {
-            padding: 60px 15px 80px;
-          }
-          .pair-row {
-            grid-template-columns: 1fr;
-            gap: 40px;
-          }
-          .photo-frame {
-            width: 100%;
-            max-width: 400px;
-            padding: 8px;
-            border-radius: 40px;
-          }
-          .photo-frame img {
-            border-radius: 32px;
-          }
-          .message-card {
-            padding: 40px 20px;
-            border-radius: 40px;
-          }
+        .nav-subtitle {
+          font-size: 0.9rem;
+          color: #fb7185;
+          letter-spacing: 1px;
         }
       `}</style>
 
-      <div className="gallery-container">
-        <div className="gallery-header">
-          <h1 className="section-title gradient-text" style={{ fontSize: "3.5rem" }}>Happy Mother&apos;s Day</h1>
-          <p className="section-subtitle">A collection of our most beautiful memories</p>
-        </div>
-
-        <div className="photo-list">
-          {/* Photo 1: Single Featured */}
-          <motion.div 
-            className="photo-frame"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <img src={photoData[0].src} alt="Memory 1" />
-            <div className="photo-caption">{photoData[0].caption}</div>
-          </motion.div>
-
-          <div className="pairs-section">
-            {/* Row 2: Two Photos */}
-            <div className="pair-row">
-              {photoData.slice(1, 3).map((photo, i) => (
-                <motion.div 
-                  key={i}
-                  className="photo-frame"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.2 }}
-                >
-                  <img src={photo.src} alt={`Memory ${i+2}`} />
-                  <div className="photo-caption">{photo.caption}</div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Row 3: Two Photos */}
-            <div className="pair-row">
-              {photoData.slice(3, 5).map((photo, i) => (
-                <motion.div 
-                  key={i}
-                  className="photo-frame"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.2 }}
-                >
-                  <img src={photo.src} alt={`Memory ${i+4}`} />
-                  <div className="photo-caption">{photo.caption}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Final Message - Always Visible */}
-        <div className="final-reveal">
-          <motion.div 
-            className="message-card"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <span style={{ fontSize: "5rem", display: "block", marginBottom: "20px" }}>💝</span>
-            <h2 className="section-title gradient-text" style={{ fontSize: "3rem" }}>I Love You Beyond Words</h2>
-            <p style={{ fontSize: "1.4rem", color: "#444", lineHeight: "1.8", margin: "20px 0" }}>
-              Every memory here is a treasure because you are the one sharing it with me. 
-              Thank you for being my strength, my light, and my best friend.
-            </p>
-            <p style={{ fontFamily: "var(--font-script)", fontSize: "3.5rem", color: "#f43f5e", margin: "40px 0" }}>
-              Happy Mother&apos;s Day, Mom! 🌸
-            </p>
-            <p style={{ fontSize: "1.2rem", color: "#666" }}>
-              You are the best mom in the entire world. ♾️❤️
-            </p>
-
-            <div style={{ marginTop: "60px" }}>
-              <Link href="./" style={{ 
-                padding: "15px 30px", 
-                background: "var(--color-rose-500)", 
-                color: "white", 
-                borderRadius: "50px", 
-                textDecoration: "none",
-                fontWeight: "bold",
-                boxShadow: "0 10px 25px rgba(244, 63, 94, 0.4)"
-              }}>
-                ← Back to Home 💐
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Fireworks always active in background of final section */}
-        <div className="fireworks-container">
-          {Array.from({ length: 20 }).map((_, i) => (
-            <motion.div
-              key={i}
-              style={{
-                position: "absolute",
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                fontSize: "2.5rem"
-              }}
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: [0, 1.2, 0], opacity: [0, 1, 0] }}
-              transition={{ delay: i * 0.15, duration: 2.5, repeat: Infinity }}
-            >
-              {["✨", "💖", "🌸", "🌺", "🌷"][i % 5]}
-            </motion.div>
-          ))}
-        </div>
+      <div className="gallery-nav">
+        <h1 className="nav-title">Khushi ❤️ Mumma</h1>
+        <p className="nav-subtitle">MY BEAUTIFUL MEMORIES</p>
       </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
+        {photoData.map((photo, i) => (
+          <motion.div 
+            key={i}
+            className="photo-card"
+            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+          >
+            <h2 className="card-title">{photo.title}</h2>
+            <div className="card-emojis">💖 👸 🧸 💐 👩‍👧</div>
+            
+            <img src={photo.src} alt="Mom" className="card-photo" />
+            
+            <p className="card-caption">
+              {photo.caption}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+
+      <footer style={{ marginTop: '40px', textAlign: 'center' }}>
+        <p style={{ fontFamily: 'var(--font-script)', fontSize: '2rem', color: '#f43f5e', marginBottom: '30px' }}>
+          You are the best Mom ever! ♾️❤️
+        </p>
+        <Link href="./" style={{ 
+          display: 'inline-block',
+          padding: '12px 30px', 
+          background: '#fb7185', 
+          color: 'white', 
+          borderRadius: '50px', 
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          boxShadow: '0 10px 25px rgba(244, 63, 94, 0.3)'
+        }}>
+          ← Back to Home
+        </Link>
+      </footer>
     </div>
   );
 }
