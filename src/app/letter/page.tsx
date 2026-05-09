@@ -220,7 +220,8 @@ export default function LetterPage() {
         </motion.div>
 
         <motion.div
-          className="next-page"
+          className="next-link-container"
+          style={{ marginTop: '60px', textAlign: 'center' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5 }}

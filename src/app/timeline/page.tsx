@@ -24,6 +24,13 @@ export default function TimelinePage() {
           position: relative;
           z-index: 1;
         }
+        .next-link-container {
+          text-align: center;
+          margin-top: 80px; /* Increased margin */
+          margin-bottom: 60px;
+          position: relative;
+          z-index: 2;
+        }
         .timeline-header {
           text-align: center;
           margin-bottom: 50px;
@@ -39,7 +46,7 @@ export default function TimelinePage() {
           margin: 0 auto;
           display: flex;
           flex-direction: column;
-          gap: 60px;
+          gap: 40px; /* Decreased gap */
         }
         .timeline-line {
           position: absolute;

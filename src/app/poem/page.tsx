@@ -47,7 +47,7 @@ export default function PoemPage() {
         }
         .stanza {
           text-align: center;
-          margin-bottom: 48px; /* Increased */
+          margin-bottom: 60px; /* Increased to match other pages */
           padding: 32px 24px;
         }
         .stanza-emoji {
