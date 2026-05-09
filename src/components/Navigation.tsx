@@ -13,9 +13,7 @@ const navItems = [
   { href: "/quotes", label: "✨ Quotes" },
   { href: "/poem", label: "🌸 Poem" },
   { href: "/wishes", label: "🎁 Wishes" },
-  { href: "/gallery-1", label: "📸 Photos 1" },
-  { href: "/gallery-2", label: "📷 Photos 2" },
-  { href: "/gallery-3", label: "🖼️ Photos 3" },
+  { href: "/gallery-1", label: "📸 Our Photos" },
 ];
 
 export default function Navigation() {
