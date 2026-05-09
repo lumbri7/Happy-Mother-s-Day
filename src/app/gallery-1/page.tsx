@@ -31,7 +31,7 @@ export default function GalleryPage() {
     <div className="page-container" style={{ 
       background: 'linear-gradient(to bottom, #fff5f7, #ffe4e6, #fce7f3)',
       minHeight: '100vh',
-      padding: '80px 20px',
+      padding: '80px 10px',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center'
@@ -41,10 +41,10 @@ export default function GalleryPage() {
           background: white !important;
           border-radius: 40px !important;
           box-shadow: 0 20px 60px rgba(244, 63, 94, 0.1) !important;
-          padding: 30px !important;
-          width: 100% !important;
-          max-width: 440px !important;
-          margin-bottom: 50px !important;
+          padding: 25px !important;
+          width: fit-content !important; /* Adjust card width to image */
+          max-width: 95vw !important;
+          margin-bottom: 60px !important;
           display: flex !important;
           flex-direction: column !important;
           align-items: center !important;
@@ -52,41 +52,43 @@ export default function GalleryPage() {
         }
         .card-photo-container {
           width: 100% !important;
-          margin: 20px 0 !important;
-          border-radius: 25px !important;
+          margin: 15px 0 !important;
+          border-radius: 20px !important;
           overflow: hidden !important;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
-          background: #fdf2f8 !important;
+          box-shadow: 0 8px 25px rgba(0,0,0,0.06) !important;
         }
         .card-photo {
-          width: 100% !important;
+          width: auto !important;
+          max-width: 100% !important;
           height: auto !important;
           display: block !important;
-          /* Removed any object-fit or height constraints to ensure full visibility */
+          margin: 0 auto !important;
+          /* NO object-fit or fixed aspect ratios to keep original ratio */
         }
         .card-title {
           font-family: var(--font-body) !important;
-          font-weight: 700 !important;
-          font-size: 1.5rem !important;
+          font-weight: 800 !important;
+          font-size: 1.4rem !important;
           color: #be123c !important;
           margin-bottom: 5px !important;
           text-align: center !important;
+          white-space: nowrap !important;
         }
         .card-emojis {
-          font-size: 1.5rem !important;
+          font-size: 1.3rem !important;
           margin-bottom: 5px !important;
-          letter-spacing: 5px !important;
+          letter-spacing: 4px !important;
         }
         .gallery-nav {
            width: 100%;
-           max-width: 440px;
+           max-width: 500px;
            text-align: center;
            margin-bottom: 40px;
-           border-bottom: 1px solid #fecdd3;
+           border-bottom: 2px solid #fecdd3;
            padding-bottom: 20px;
         }
         .nav-title {
-          font-size: 2rem;
+          font-size: 2.2rem;
           font-weight: 900;
           color: #be123c;
           margin-bottom: 8px;
@@ -95,7 +97,7 @@ export default function GalleryPage() {
 
       <div className="gallery-nav">
         <h1 className="nav-title">Cute ❤️ Mumma</h1>
-        <p className="nav-subtitle" style={{ color: '#fb7185', fontWeight: '700', letterSpacing: '1px' }}>MY BEAUTIFUL MEMORIES</p>
+        <p className="nav-subtitle" style={{ color: '#fb7185', fontWeight: '700', letterSpacing: '2px' }}>MY BEAUTIFUL MEMORIES</p>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
@@ -103,10 +105,10 @@ export default function GalleryPage() {
           <motion.div 
             key={i}
             className="photo-card"
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+            initial={{ opacity: 0, scale: 0.95, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
+            transition={{ duration: 0.7, delay: i * 0.1 }}
           >
             <h2 className="card-title">{photo.title}</h2>
             <div className="card-emojis">💖 👸 🧸 💐 👩‍👧</div>
@@ -116,8 +118,8 @@ export default function GalleryPage() {
             </div>
 
             <motion.div 
-              style={{ color: '#f43f5e', fontSize: '1.2rem', marginTop: '10px' }}
-              animate={{ scale: [1, 1.2, 1] }}
+              style={{ color: '#f43f5e', fontSize: '1.2rem', marginTop: '5px' }}
+              animate={{ y: [0, -5, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
             >
               ❤️
@@ -126,7 +128,7 @@ export default function GalleryPage() {
         ))}
       </div>
 
-      <footer style={{ marginTop: '40px', textAlign: 'center' }}>
+      <footer style={{ marginTop: '40px', textAlign: 'center', paddingBottom: '60px' }}>
         <p style={{ fontFamily: 'var(--font-script)', fontSize: '2.5rem', color: '#f43f5e', marginBottom: '30px' }}>
           You are my World! ♾️❤️
         </p>
