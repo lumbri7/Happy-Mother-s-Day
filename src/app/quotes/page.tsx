@@ -50,14 +50,17 @@ export default function QuotesPage() {
           margin: 0 auto;
           display: flex;
           flex-direction: column;
-          gap: 24px;
+          gap: 48px; /* Increased */
         }
         .quote-card {
-          padding: 32px 28px;
+          padding: 36px 32px;
           border-radius: 40px;
           position: relative;
           overflow: hidden;
-          border: 1px solid rgba(255, 255, 255, 0.4);
+          background: rgba(255, 255, 255, 0.85);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.6);
+          box-shadow: 0 15px 40px rgba(244, 63, 94, 0.1);
         }
         .quote-mark {
           position: absolute;
@@ -182,7 +185,6 @@ export default function QuotesPage() {
             <motion.div
               key={index}
               className="quote-card"
-              style={{ background: bgColors[index] }}
               initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30, y: 15 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true, margin: "-30px" }}

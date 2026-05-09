@@ -40,24 +40,18 @@ export default function WishesPage() {
           width: 100%;
           display: flex;
           flex-direction: column;
-          gap: 24px;
+          gap: 48px; /* Increased */
         }
         .wish-card {
-          padding: 32px 28px;
+          padding: 36px 32px;
           border-radius: 40px;
-          color: white;
+          color: #333;
           position: relative;
           overflow: hidden;
-          border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .wish-card::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(10px);
-          border-radius: 40px;
-          z-index: 0;
+          background: rgba(255, 255, 255, 0.85);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.6);
+          box-shadow: 0 15px 40px rgba(244, 63, 94, 0.1);
         }
         .wish-number {
           position: relative;
@@ -65,14 +59,15 @@ export default function WishesPage() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 32px;
-          height: 32px;
-          background: rgba(255, 255, 255, 0.3);
+          width: 36px;
+          height: 36px;
+          background: var(--color-rose-100);
+          color: var(--color-rose-600);
           border-radius: 50%;
           font-family: var(--font-display);
           font-weight: 700;
-          font-size: 0.85rem;
-          margin-bottom: 14px;
+          font-size: 0.9rem;
+          margin-bottom: 16px;
         }
         .wish-text {
           position: relative;
@@ -187,7 +182,6 @@ export default function WishesPage() {
             <motion.div
               key={index}
               className="wish-card"
-              style={{ background: wish.bg }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-20px" }}

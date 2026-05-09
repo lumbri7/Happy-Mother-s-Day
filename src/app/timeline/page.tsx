@@ -37,7 +37,9 @@ export default function TimelinePage() {
           position: relative;
           max-width: 900px;
           margin: 0 auto;
-          padding: 20px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
         }
         .timeline-line {
           position: absolute;
@@ -185,7 +187,7 @@ export default function TimelinePage() {
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ repeat: Infinity, duration: 4 }}
           >
-            📅
+            
           </motion.span>
           <h1 className="section-title gradient-text">Our Beautiful Journey</h1>
           <p className="section-subtitle">Every moment with you is precious</p>
