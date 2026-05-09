@@ -20,7 +20,7 @@ export default function TimelinePage() {
       <style jsx>{`
         .timeline-container {
           min-height: 100vh;
-          padding: 100px 20px 80px;
+          padding: 120px 20px 80px;
           position: relative;
           z-index: 1;
         }

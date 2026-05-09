@@ -19,7 +19,7 @@ export default function WishesPage() {
       <style jsx>{`
         .wishes-container {
           min-height: 100vh;
-          padding: 100px 20px 80px;
+          padding: 120px 20px 80px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -44,10 +44,11 @@ export default function WishesPage() {
         }
         .wish-card {
           padding: 32px 28px;
-          border-radius: 22px;
+          border-radius: 40px;
           color: white;
           position: relative;
           overflow: hidden;
+          border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .wish-card::before {
           content: '';
@@ -55,7 +56,7 @@ export default function WishesPage() {
           inset: 0;
           background: rgba(255, 255, 255, 0.15);
           backdrop-filter: blur(10px);
-          border-radius: 22px;
+          border-radius: 40px;
           z-index: 0;
         }
         .wish-number {

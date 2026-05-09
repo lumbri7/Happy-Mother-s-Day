@@ -25,7 +25,7 @@ export default function ReasonsPage() {
       <style jsx>{`
         .reasons-container {
           min-height: 100vh;
-          padding: 100px 20px 80px;
+          padding: 120px 20px 80px;
           position: relative;
           z-index: 1;
         }
@@ -66,9 +66,10 @@ export default function ReasonsPage() {
           right: 0;
           height: 4px;
           background: linear-gradient(to right, var(--color-rose-300), var(--color-pink-300), var(--color-purple-300));
-          border-radius: 24px 24px 0 0;
+          border-radius: 40px 40px 0 0;
           opacity: 0;
           transition: opacity 0.3s ease;
+          z-index: 2;
         }
         .reason-card:hover::before {
           opacity: 1;

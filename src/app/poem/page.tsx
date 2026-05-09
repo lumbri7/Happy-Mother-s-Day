@@ -19,7 +19,7 @@ export default function PoemPage() {
       <style jsx>{`
         .poem-container {
           min-height: 100vh;
-          padding: 100px 20px 80px;
+          padding: 120px 20px 80px;
           display: flex;
           flex-direction: column;
           align-items: center;

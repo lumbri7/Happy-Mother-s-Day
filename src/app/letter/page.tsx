@@ -33,7 +33,7 @@ export default function LetterPage() {
       <style jsx>{`
         .letter-container {
           min-height: 100vh;
-          padding: 100px 20px 80px;
+          padding: 120px 20px 80px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -54,7 +54,7 @@ export default function LetterPage() {
           right: 16px;
           bottom: 16px;
           border: 2px solid var(--color-rose-100);
-          border-radius: 18px;
+          border-radius: 36px;
           pointer-events: none;
         }
         .letter-header {

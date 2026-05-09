@@ -14,7 +14,7 @@ export default function HomePage() {
           align-items: center;
           justify-content: center;
           min-height: 100vh;
-          padding: 100px 24px 60px;
+          padding: 120px 24px 60px;
           text-align: center;
           position: relative;
           z-index: 1;

@@ -32,7 +32,7 @@ export default function QuotesPage() {
       <style jsx>{`
         .quotes-container {
           min-height: 100vh;
-          padding: 100px 20px 80px;
+          padding: 120px 20px 80px;
           position: relative;
           z-index: 1;
         }
@@ -54,9 +54,10 @@ export default function QuotesPage() {
         }
         .quote-card {
           padding: 32px 28px;
-          border-radius: 24px;
+          border-radius: 40px;
           position: relative;
           overflow: hidden;
+          border: 1px solid rgba(255, 255, 255, 0.4);
         }
         .quote-mark {
           position: absolute;
